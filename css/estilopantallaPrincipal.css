@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   /*background: black;*/
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.cabecera{
+    width: 100%;
+    background: rgba(68, 120, 233, 0);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+   
+
+    padding-top: 15px;
+    padding-bottom: 30px;
+    /*margin: auto;*/
+
+    overflow: hidden;
+}
+
+.logotexto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera img{
+    width: 80px;
+}
+
+.cabecera .texto{
+    display: flex;
+    margin-top: 5px;
+    background: rgba(112, 111, 111, 0.5);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.texto h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+    
+}
+
+.texto h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+    margin-right: 10px;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+
+    padding: 0px 50px;
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+}
+nav li a{
+    /*border: 1px solid black;*/
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    margin: 15px;
+
+    transition: all 0.5s;
+}
+
+.izquierda li a{
+    margin-right: 50px;
+}
+
+.derecha li a{
+    margin-left: 50px;
+}
+
+nav ul li a:hover, nav ul li a.activate{
+    background: white;
+    color: black;
+    transition: all 0.5s;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    right: 20px;
+    z-index: 100;
+    /*border: 1px solid red;*/
+}
+
+
+.menu img{
+    width: 40px;
+    display: block;
+}
+
+.fondo{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textofondo{
+    /*border: 1px solid black;*/
+    
+    /*color: white;*/
+    /*text-transform: uppercase;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-right: -30px;*/
+    padding-bottom: 5px;
+    /*overflow: hidden;*/
+}
+
+.textofondo ul{
+    /*border: 1px solid blue;*/
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: cambio 42s infinite alternate;
+
+    text-align: center;
+}
+
+.textofondo li{
+    /*font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+    letter-spacing: 10px;*/
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    margin-right: -50px;
+
+    padding: 10px 0px 10px 0px;
+    
+    /*text-transform: uppercase;
+    letter-spacing: 10px;*/
+    /*border: 1px solid green;*/
+    list-style: none;
+
+    width: 100%;
+}
+
+.exp{background: rgba(107, 118, 255,.3);}
+.via{background: rgba(247, 217, 47, 0.3);}
+.obs{background: rgba(244, 118, 69,.3);}
+.son{background: rgba(7, 30, 61,.3);}
+/*.textofondo::after{
+    content: '';
+    width: .3rem;
+    height: .3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #0C383E;
+    position: relative;
+    top: -0.65rem;
+    left: -5.05rem;
+}*/
+
+/*.elipse{
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    border-style: solid;
+}*/
+
+.elipse-exterior-delgado{
+    border: 5px solid rgba(11, 64, 156, .2);
+    width: 300px;
+    height: 300px;
+    animation: elipseorbita 15s ease-in-out infinite;
+    border-radius: 50%;
+
+    
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    
+}
+
+/*.elipse-exterior-delgado::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    border: dotted 10px rgba(139, 137, 137, 0.5);
+    border-radius: 50%;
+}*/
+
+.elipse-exterior-grueso{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid rgba(254, 217, 104,.2);
+    border-top: solid 5px rgba(254, 217, 104,.5);
+    border-bottom: solid 5px rgba(254, 217, 104,.5);
+    animation: elipserota 15s ease-in-out infinite;
+    margin-top: -300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elipse-exterior-grueso::after{
+    content: '';
+    width: 240px;
+    height: 240px;
+    border: 5px dotted rgba(254, 217, 104,.5);
+    border-radius: 50%;
+}
+
+.elipse-orbita{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    /*top: -3px;
+    right: 100px;*/
+    margin-top: 70px;
+}
+
+.elipse-orbita::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    /*border: 1px solid red;*/
+    display: inline-block;
+    background: #FED968;
+    border-radius: 50%;
+}
+
+.explora{
+
+    /*width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -400px;*/
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+
+    overflow: hidden;
+    padding: 20px 0px 20px 0px;
+}
+
+
+@media screen and (max-width: 1200px){
+
+    .texto{
+        flex-direction: column;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .izquierda li a{
+        margin-right: -10px;
+    }
+    .derecha li a{
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+   
+
+    nav{
+        display: block;
+        padding: 0;
+        background: rgba(255, 199, 30,.9);
+
+        width: 50%;
+        height: 100vh;
+
+        top: 122px;
+        left: -100%;
+
+        transition: all 0.5s;
+    }
+
+    nav ul{
+
+    }
+
+    nav ul li{
+        /*border: 1px solid red;*/
+       display: block;
+    }
+
+    nav ul li a{
+        
+        margin: 0;
+    }
+
+    .izquierda li a{
+        margin: 0;
+    }
+
+    .derecha li a{
+        margin: 0;
+    }
+
+    .menu{
+        display: block;
+        
+    }
+    
+
+
+    .aparicion{
+        left: 0;
+        transition: all 0.5s;
+    }
+
+    /*.textofondo li{
+        font-size: 25px;
+    }*/
+    
+}
+
+@media screen and (max-width: 800px){
+   
+    .cabecera{
+        /*padding-bottom: 55px;*/
+        justify-content: space-between;
+    }
+
+    .logotexto{
+        margin-left: 20px;
+    }
+
+    .logotexto img{
+        width: 65px;
+    }
+
+    .textofondo{
+        
+        /*letter-spacing: 23px;
+        margin-right: -23px;
+        font-size: 30px;
+
+        margin-bottom: 30px;*/
+    }
+
+    .elipse-exterior-delgado{
+        width: 220px;
+        height: 220px;
+        
+    }
+
+    /*.elipse-exterior-delgado::after{
+        width: 100px;
+        height: 100px;
+    }*/
+
+    .elipse-exterior-grueso{
+        width: 220px;
+        height: 220px;
+        margin-top: -220px;
+    }
+
+    .elipse-exterior-grueso::after{
+        width: 160px;
+        height: 160px;
+        
+    }
+
+    .elipse-orbita{
+        margin-left: -12px;
+    }
+
+    .explora{
+        margin-top: 0px;
+    }
+
+    .textofondo li{
+        font-size: 30px;
+        letter-spacing: 30px;
+        margin-right: -30px;
+    }
+
+}
+
+@keyframes elipserota {
+    0%{
+        transform: rotate(-45deg);
+    }
+
+    100%{
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes elipseorbita {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cambio{
+    0%,10%{margin-left: 0;opacity: 1;}
+    20%{margin-left: 0;opacity: 0;}
+
+    
+
+    21%,23%{margin-left: -100%; opacity: 0;}
+    33%,38%{margin-left: -100%;opacity: 1;}
+    45%{margin-left: -100%; opacity: 0;}
+
+    
+
+    46%, 48%{margin-left: -200%; opacity: 0;}
+    58%,63%{margin-left: -200%; opacity: 1;}
+    70%{margin-left: -200%; opacity: 0;}
+
+    
+
+    71%,73%{margin-left: -300%; opacity: 0;}
+    83%,88%{margin-left: -300%; opacity: 1;}
+    100%{margin-left: -300%; opacity: 0;}
+}
